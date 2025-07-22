@@ -9,11 +9,11 @@ describe('Login', () => {
                 .set('Content-Type', 'application/json')
                 .send({
                     'username': 'henrique',
-                    'password': '123456'
+                    'senha': '123456'
                 })
 
             expect(response.status).to.equal(200)
-            expect(response.body.token).to.be.not.empty()
+            expect(response.body.token).to.not.be.empty
             expect(response.body.token).to.be.a('string')
         })
     })
